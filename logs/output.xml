@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.9 on darwin)" generated="20230511 17:24:49.780" rpa="false" schemaversion="3">
+<suite id="s1" name="Suite" source="/Users/marcoslima/projects/proatas-robot/suite.robot">
+<test id="s1-t1" name="Cadastro de Usuário" line="14">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${SERVER_URL}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Teste</arg>
+<arg>app=${EXECDIR}/app/app-release.apk</arg>
+<arg>udid=emulator-5554</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20230511 17:25:15.633" endtime="20230511 17:25:15.650"/>
+</kw>
+<msg timestamp="20230511 17:25:15.652" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getDevicePixelRatio (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/viewport.js:14:10)
+    at AndroidUiautomator2Driver.fillDeviceDetails (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:244:28)
+    at AndroidUiautomator2Driver.createSession (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:230:7)
+    at AppiumDriver.createSession (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/appium.js:387:35)</msg>
+<status status="FAIL" starttime="20230511 17:24:50.180" endtime="20230511 17:25:15.681"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=input-cpf</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.682" endtime="20230511 17:25:15.683"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=input-cpf</arg>
+<arg>${USER_CPF}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.683" endtime="20230511 17:25:15.683"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=button-cadastro</arg>
+<arg>timeout=30</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.683" endtime="20230511 17:25:15.683"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=button-cadastro</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.683" endtime="20230511 17:25:15.683"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=button-accept-terms</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.684" endtime="20230511 17:25:15.684"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=button-accept-terms</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.684" endtime="20230511 17:25:15.684"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=input-cpf</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.684" endtime="20230511 17:25:15.684"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=input-cpf</arg>
+<arg>${USER_CPF}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.684" endtime="20230511 17:25:15.684"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=input-name</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.684" endtime="20230511 17:25:15.684"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=input-name</arg>
+<arg>${USER_NAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.684" endtime="20230511 17:25:15.684"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=input-phone</arg>
+<arg>${USER_PHONE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.685" endtime="20230511 17:25:15.685"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>accessibility_id=input-email</arg>
+<arg>${USER_EMAIL}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.685" endtime="20230511 17:25:15.685"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=button-continue</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.685" endtime="20230511 17:25:15.685"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="NOT RUN" starttime="20230511 17:25:15.685" endtime="20230511 17:25:15.685"/>
+</kw>
+<status status="FAIL" starttime="20230511 17:24:50.178" endtime="20230511 17:25:15.689">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/jsonwp-proxy/proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at AndroidUiautomator2Driver.commands.getDevicePixelRatio (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/commands/viewport.js:14:10)
+    at AndroidUiautomator2Driver.fillDeviceDetails (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:244:28)
+    at AndroidUiautomator2Driver.createSession (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/node_modules/appium-uiautomator2-driver/lib/driver.js:230:7)
+    at AppiumDriver.createSession (/Applications/Appium Server GUI.app/Contents/Resources/app/node_modules/appium/lib/appium.js:387:35)</status>
+</test>
+<status status="FAIL" starttime="20230511 17:24:49.784" endtime="20230511 17:25:15.698"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suite">Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
